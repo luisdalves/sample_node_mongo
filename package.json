@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:tmlbl/sample_node_mongo.git"
+    "url": "git@github.com:luisdalves/sample_node_mongo.git"
   },
   "author": "Tim Lebel",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tmlbl/sample_node_mongo/issues"
+    "url": "https://github.com/luisdalves/sample_node_mongo/issues"
   },
-  "homepage": "https://github.com/tmlbl/sample_node_mongo",
+  "homepage": "https://github.com/luisdalves/sample_node_mongo",
   "dependencies": {
     "express": "^4.2.0",
     "mongoose": "4.*.*",
