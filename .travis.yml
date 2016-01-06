@@ -17,11 +17,11 @@ branches:
     - master
 
 before_install:
-  - npm install -g grunt-cli webpack karma-cli
-  - npm test
+  - "npm install -g grunt-cli webpack karma-cli"
+  - "npm test"
 
 install:
-  - npm install
+  - "npm install"
 
 after_install:
   - echo "testing"
