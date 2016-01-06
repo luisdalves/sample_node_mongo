@@ -6,7 +6,6 @@ node_js:
   - 0.12
 
 services:
-  - mongodb
   - docker
 
 cache:
@@ -24,6 +23,8 @@ install:
 
 after_success:
   - echo "Build Success"
+  - docker ps -a
 
 after_failure:
   - echo "Build Error!"
+  - docker ps -a
