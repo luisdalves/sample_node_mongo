@@ -1,0 +1,19 @@
+sudo: false
+language: node_js
+node_js:
+  - 0.12
+
+services:
+  - docker
+  - mongodb
+
+cache:
+  directories:
+    - node_modules
+
+branches:
+  only:
+    - master
+
+before_install:
+  - npm install -g grunt-cli webpack karma-cli
