@@ -17,5 +17,11 @@ branches:
     - master
 
 before_install:
+  - npm grunt-cli
   - npm test
+
+install:
   - npm install
+
+after_install:
+  - echo "testing"
