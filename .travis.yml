@@ -7,7 +7,7 @@ node_js:
 
 services:
   - mongodb
-#  - docker
+  - docker
 
 cache:
   directories:
@@ -22,5 +22,8 @@ before_install:
 
 #install:
 
-after_install:
-  - echo "testing"
+after_success:
+  - echo "Build Success"
+
+after_failure:
+  - echo "Build Error!"
