@@ -1,11 +1,12 @@
-sudo: false
+sudo: required
+
 language: node_js
+
 node_js:
   - 0.12
 
 services:
   - docker
-  - mongodb
 
 cache:
   directories:
@@ -16,4 +17,5 @@ branches:
     - master
 
 before_install:
-  - npm install -g grunt-cli webpack karma-cli
+  - npm test
+  - npm install
