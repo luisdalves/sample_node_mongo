@@ -1,4 +1,4 @@
-sudo: required
+sudo: false
 
 language: node_js
 
@@ -18,11 +18,9 @@ branches:
     - master
 
 before_install:
-  - "npm install -g grunt-cli webpack karma-cli"
+  - "npm install -g grunt-cli"
 
-install:
-  - "npm test"
-  - "npm install"
+#install:
 
 after_install:
   - echo "testing"
