@@ -18,9 +18,9 @@ branches:
 
 before_install:
   - "npm install -g grunt-cli webpack karma-cli"
-  - "npm test"
 
 install:
+  - "npm test"
   - "npm install"
 
 after_install:
