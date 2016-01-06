@@ -6,7 +6,7 @@ node_js:
   - 0.12
 
 services:
-  - docker
+  - mongodb
 
 cache:
   directories:
