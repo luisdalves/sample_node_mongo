@@ -17,7 +17,7 @@ branches:
     - master
 
 before_install:
-  - npm grunt-cli
+  - npm install -g grunt-cli webpack karma-cli
   - npm test
 
 install:
