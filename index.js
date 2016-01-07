@@ -2,7 +2,7 @@ var express = require("express"),
     mongoose = require("mongoose"),
     app = express();
 
-mongoose.connect("mongodb://172.17.42.1/test", function (err) {
+mongoose.connect("mongodb://localhost/test", function (err) {
   if (!err) {
     console.log("Connected to MongoDB");
   } else {

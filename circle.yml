@@ -1,4 +1,6 @@
 machine:
+  node:
+    - 0.12
   services:
     - docker
     - mongodb
@@ -6,14 +8,14 @@ machine:
 dependencies:
   cache_directories:
     - "~/docker"
+    - "~/sample_node_mongo/node_modules"
   pre:
     - docker info && docker version
-    - "docker build -t sample_node_mongo:$CIRCLE_SHA1 ~/sample_node_mongo/."
-    - "rm -rf ~/sample_node_mongo"
 
 deployment:
   prod:
     branch: master
     commands:
+      - "docker build -t sample_node_mongo:$CIRCLE_SHA1 ~/sample_node_mongo/."
       - docker login -e docker@flowics.com -u docker -p 123456 monitor.flowics.com:5000/sample_node_mongo
       - docker push sample_node_mongo:$CIRCLE_SHA1 monitor.flowics.com:5000/sample_node_mongo:$CIRCLE_SHA1
