@@ -18,7 +18,7 @@ test:
   override:
     - docker run -d -p80:3000 sample_node_mongo
 
-deploy:
+deployment:
   prod:
     branch: master
     commands:
