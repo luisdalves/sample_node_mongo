@@ -6,10 +6,10 @@ machine:
 dependencies:
   cache_directories:
     - "~/docker"
-
   pre:
     - docker info && docker version
     - "docker build -t sample_node_mongo:$CIRCLE_SHA1 ~/sample_node_mongo/."
+    - "rm -rf ~/sample_node_mongo"
 
 deployment:
   prod:
