@@ -9,6 +9,6 @@ ENV NODE_ENV=production
 WORKDIR /sample_node_mongo/dist
 ADD . /sample_node_mongo
 
-RUN grunt build
+RUN /sample_node_mongo/node_modules/grunt-cli/bin/grunt build
 
 CMD npm run start
