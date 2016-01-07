@@ -15,7 +15,7 @@ dependencies:
     - docker pull mongo
  
   override:
-    - docker run --name mongo-test -d mongo
+    #- docker run --name mongo-test -d mongo
     - docker info
     - npm install -g grunt-cli
     - sudo netstat -ntlap
