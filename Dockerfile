@@ -1,6 +1,6 @@
 FROM node:4.1
 
-RUN npm install -g webpack forever phantomjs karma-cli grunt-cli browser-sync
+RUN npm install grunt-cli
 RUN mkdir -p /sample_node_mongo
 ADD package.json .npmrc /sample_node_mongo/
 WORKDIR /sample_node_mongo
