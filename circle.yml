@@ -3,6 +3,9 @@ machine:
     - docker
 
 dependencies:
+  cache_directories:
+    - "~/node_modules"
+
   pre:
     - docker info && docker version
     - docker pull mongo
@@ -10,3 +13,7 @@ dependencies:
   override:
     - docker run --name mongo-test -d mongo
     - docker info
+    - npm install -g grunt-cli
+
+test:
+  override:
