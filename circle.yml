@@ -20,4 +20,4 @@ deployment:
       - "docker build -t sample_node_mongo:$CIRCLE_SHA1 ~/sample_node_mongo/."
       - docker login -e docker@flowics.com -u docker -p 123456 monitor.flowics.com:5000
       - docker tag sample_node_mongo:$CIRCLE_SHA1 monitor.flowics.com:5000/sample_node_mongo:$CIRCLE_SHA1
-      - docker push sample_node_mongo:$CIRCLE_SHA1 monitor.flowics.com:5000/sample_node_mongo:$CIRCLE_SHA1
+      - docker push sample_node_mongo:$CIRCLE_SHA1
