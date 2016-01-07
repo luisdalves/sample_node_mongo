@@ -12,7 +12,7 @@ dependencies:
 
   pre:
     - docker info && docker version
-    - "docker build -t sample_node_mongo:latest"
+    - "docker build -t sample_node_mongo:latest ~/sample_node_mongo/."
  
 test:
   override:
