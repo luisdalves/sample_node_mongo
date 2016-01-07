@@ -1,7 +1,4 @@
 machine:
-  #node:
-  #  version: 0.12
-
   services:
     - docker
     - mongodb
@@ -13,9 +10,6 @@ dependencies:
   pre:
     - docker info && docker version
     - "docker build -t sample_node_mongo:$CIRCLE_SHA1 ~/sample_node_mongo/."
- 
-test:
-  override:
 
 deployment:
   prod:
