@@ -12,15 +12,14 @@ dependencies:
 
   pre:
     - docker info && docker version
-    - "docker build -t sample_node_mongo:latest ~/sample_node_mongo/."
+    - "docker build -t sample_node_mongo:$CIRCLE_SHA1 ~/sample_node_mongo/."
  
 test:
   override:
-    - docker run -d -p80:3000 sample_node_mongo
 
 deployment:
   prod:
     branch: master
     commands:
-      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS $EXTERNAL_REGISTRY_ENDPOINT
-      - docker push
+      - docker login -e docker@flowics.com -u docker -p 123456 monitor.flowics.com:5000/sample_node_mongo
+      - docker push monitor.flowics.com:5000/sample_node_mongo:$CIRCLE_SHA1
