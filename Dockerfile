@@ -1,6 +1,6 @@
 FROM node:4.1
 
-RUN npm install grunt-cli
+RUN npm install -g grunt-cli
 RUN mkdir -p /sample_node_mongo
 ADD package.json /sample_node_mongo/
 WORKDIR /sample_node_mongo
