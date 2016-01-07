@@ -3,9 +3,10 @@ machine:
     - docker
 
 dependencies:
-  override:
-    - docker info
-
-test:
+  pre:
+    - docker info && docker version
+    - docker pull mongo
+ 
   override:
     - docker run --name mongo-test -d mongo
+    - docker info
